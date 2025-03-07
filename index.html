@@ -292,21 +292,77 @@
     </section>
     <section class="featured">
         <h2>Popular Dishes</h2>
-        <div class="food-items">
-            <div class="food-card">
-                <img src="pizza.jpg" alt="Pizza">
-                <h3>Pizza</h3>
-                <button class="order-btn">Order Now</button>
+         <div class="food-items" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; padding: 20px;">
+            <div class="food-card" style="
+                background: white; 
+                padding: 20px; 
+                width: 250px; 
+                border-radius: 10px; 
+                box-shadow: 0px 4px 8px rgba(0,0,0,0.2); 
+                text-align: center; 
+                transition: all 0.4s ease-in-out; 
+                cursor: pointer;">
+                
+                <img src="pizza.jpg" alt="Pizza" style="width: 100%; border-radius: 10px;">
+                <h3 style="color: #e74c3c;">Pizza</h3>
+                <button class="order-btn" style="
+                    background: #e74c3c; 
+                    color: white; 
+                    padding: 10px; 
+                    border: none; 
+                    border-radius: 5px; 
+                    cursor: pointer; 
+                    transition: background 0.3s ease;">
+                    Order Now
+                </button>
             </div>
-            <div class="food-card">
-                <img src="burger.jpeg" alt="Burger">
-                <h3>Burger</h3>
-                <button class="order-btn">Order Now</button>
+        
+            <div class="food-card" style="
+                background: white; 
+                padding: 20px; 
+                width: 250px; 
+                border-radius: 10px; 
+                box-shadow: 0px 4px 8px rgba(0,0,0,0.2); 
+                text-align: center; 
+                transition: all 0.4s ease-in-out; 
+                cursor: pointer;">
+                
+                <img src="burger.jpeg" alt="Burger" style="width: 100%; border-radius: 10px;">
+                <h3 style="color: #f39c12;">Burger</h3>
+                <button class="order-btn" style="
+                    background: #f39c12; 
+                    color: white; 
+                    padding: 10px; 
+                    border: none; 
+                    border-radius: 5px; 
+                    cursor: pointer; 
+                    transition: background 0.3s ease;">
+                    Order Now
+                </button>
             </div>
-            <div class="food-card">
-                <img src="pasta.jpg" alt="Pasta">
-                <h3>Pasta</h3>
-                <button class="order-btn">Order Now</button>
+        
+            <div class="food-card" style="
+                background: white; 
+                padding: 20px; 
+                width: 250px; 
+                border-radius: 10px; 
+                box-shadow: 0px 4px 8px rgba(0,0,0,0.2); 
+                text-align: center; 
+                transition: all 0.4s ease-in-out; 
+                cursor: pointer;">
+                
+                <img src="pasta.jpg" alt="Pasta" style="width: 100%; border-radius: 10px;">
+                <h3 style="color: #3498db;">Pasta</h3>
+                <button class="order-btn" style="
+                    background: #3498db; 
+                    color: white; 
+                    padding: 10px; 
+                    border: none; 
+                    border-radius: 5px; 
+                    cursor: pointer; 
+                    transition: background 0.3s ease;">
+                    Order Now
+                </button>
             </div>
         </div>
     </section>
@@ -333,6 +389,17 @@
     </footer>
 
     <script>
+         document.querySelectorAll('.food-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.05)';
+                card.style.boxShadow = '0px 10px 20px rgba(0,0,0,0.3)';
+            });
+    
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+                card.style.boxShadow = '0px 4px 8px rgba(0,0,0,0.2)';
+            });
+        });
         document.addEventListener("DOMContentLoaded", function() {
             const sections = document.querySelectorAll(".fade-in-section");
         
